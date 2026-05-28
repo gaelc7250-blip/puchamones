@@ -1,0 +1,94 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#111;
+    color:white;
+}
+
+
+
+header{
+    text-align:center;
+    padding:60px;
+    background:linear-gradient(90deg, orange, red);
+}
+
+header h1{
+    font-size:60px;
+}
+
+header p{
+    font-size:20px;
+}
+
+
+
+button{
+    padding:15px 25px;
+    border:none;
+    border-radius:10px;
+    background:black;
+    color:white;
+    cursor:pointer;
+    margin-top:20px;
+    font-size:16px;
+}
+
+button:hover{
+    background:white;
+    color:black;
+}
+
+
+
+section{
+    padding:40px;
+    text-align:center;
+}
+
+.intro{
+    background:#1b1b1b;
+}
+
+.reglas{
+    background:#222;
+}
+
+.chakra{
+    background:#1b1b1b;
+}
+
+
+
+.caja{
+    background:#333;
+    width:60%;
+    margin:auto;
+    padding:20px;
+    border-radius:20px;
+}
+
+
+
+.personajes{
+    background:#222;
+}
+
+.galeria{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.galeria img{
+    width:220px;
+    height:250px;
+    border-radius:20px;
+    object-fit:cover;
+    transition:0.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+}

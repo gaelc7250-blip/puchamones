@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Batalla Ninja</title>
+    <link rel="stylesheet" href="reglas.css">
+</head>
+<body>
+
+    <!-- MENU -->
+    <header>
+        <h1> BATALLA NINJA </h1>
+        <p>Elige tu personaje y lucha usando chakra, ataques y defensa.</p>
+
+        <button onclick="irJuego()">
+            Ver Reglas del Juego
+        </button>
+    </header>
+
+    <!-- INTRODUCCION -->
+    <section class="intro" id="juego">
+
+        <h2>¿Qué es Batalla Ninja?</h2>
+
+        <p>
+            Batalla Ninja es un juego inspirado en combates estratégicos
+            donde cada personaje tiene vida, ataque y chakra.
+        </p>
+
+        <p>
+            El jugador debe administrar correctamente su energía para
+            atacar, defenderse y usar súper ataques.
+        </p>
+
+        <p>
+            El objetivo es derrotar al enemigo antes de quedarse sin vida.
+        </p>
+
+    </section>
+
+    <!-- REGLAS -->
+    <section class="reglas">
+
+        <h2> Reglas</h2>
+
+        <div class="caja">
+
+            <p>✔ Mucho daño = poca vida.</p>
+            <p>✔ Vida mínima 100 y máxima 250.</p>
+            <p>✔ Ataque mínimo 10 y máximo 30.</p>
+            <p>✔ El súper ataque gasta 25 de chakra.</p>
+            <p>✔ La defensa gasta 15 de chakra.</p>
+            <p>✔ Recargar chakra suma 50.</p>
+            <p>✔ El primer turno es aleatorio.</p>
+
+        </div>
+
+    </section>
+
+    <!-- CHAKRA -->
+    <section class="chakra">
+
+        <h2> ¿Qué es el Chakra?</h2>
+
+        <p>
+            El chakra es la energía del personaje.
+            Sirve para realizar ataques especiales,
+            defenderse y usar habilidades.
+        </p>
+
+        <p>
+            Puedes recargar chakra usando el botón
+            de recarga durante la batalla.
+        </p>
+
+        <button onclick="mensaje()">
+            Mostrar Mensaje
+        </button>
+
+        <h3 id="texto"></h3>
+
+    </section>
+
+    <!-- PERSONAJES -->
+    <section class="personajes">
+
+        <h2> Personajes</h2>
+
+        <div class="galeria">
+
+            <img src="kirby.png">
+            <img src="bmo.png">
+            <img src="jake.png">
+            <img src="steve.png">
+            <img src="mike.png">
+            <img src="planton.png">
+            <img src="bomb.png">
+            <img src="boo.png">
+            <img src="ditto.png">
+            <img src="among.png">
+            <img src="sh.png">
+            <img src="a.png.jpeg">
+
+        </div>
+
+    </section>
+
+    <script src="reglas.js"></script>
+
+</body>
+</html>
