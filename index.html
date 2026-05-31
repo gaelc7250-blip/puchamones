@@ -2,79 +2,92 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batalla Ninja</title>
     <link rel="stylesheet" href="reglas.css">
 </head>
 <body>
 
-    <!-- MENU -->
+    <!-- MENÚ -->
+    <nav>
+        <a href="#intro">Inicio</a>
+        <a href="#reglas">Reglas</a>
+        <a href="#chakra">Chakra</a>
+        <a href="#personajes">Personajes</a>
+        <a href="#steam">Juego</a>
+        <a href="#equipo">Equipo</a>
+    </nav>
+
+    <!-- PORTADA -->
     <header>
-        <h1> BATALLA NINJA </h1>
+
+        <h1>BATALLA NINJA</h1>
 
         <p>
-            Elige tu personaje y lucha usando chakra,
-            ataques y defensa.
+            Elige tu personaje y demuestra quién es el mejor guerrero.
         </p>
 
         <button onclick="irJuego()">
             Ver Reglas del Juego
         </button>
+
     </header>
 
-    <!-- INTRODUCCION -->
-    <section class="intro" id="juego">
+    <!-- INTRODUCCIÓN -->
+    <section class="intro" id="intro">
 
         <h2>¿Qué es Batalla Ninja?</h2>
 
+        <img src="bn.png" alt="Batalla Ninja">
+
         <p>
-            Batalla Ninja es un juego inspirado en combates estratégicos
-            donde cada personaje tiene vida, ataque y chakra.
+            Batalla Ninja es un juego de combate estratégico donde cada
+            personaje posee diferentes estadísticas de vida, ataque y chakra.
         </p>
 
         <p>
-            El jugador debe administrar correctamente su energía para
-            atacar, defenderse y usar súper ataques.
-        </p>
-
-        <p>
-            El objetivo es derrotar al enemigo antes de quedarse sin vida.
+            El objetivo es derrotar a tu rival utilizando ataques,
+            defensas y habilidades especiales administrando correctamente
+            tu energía.
         </p>
 
     </section>
 
     <!-- REGLAS -->
-    <section class="reglas">
+    <section class="reglas" id="reglas">
 
-        <h2> Reglas</h2>
+        <h2>Reglas del Juego</h2>
+
+        <img src="reg.png" alt="Reglas">
 
         <div class="caja">
 
-            <p>✔ Mucho daño = poca vida.</p>
-            <p>✔ Vida mínima 100 y máxima 250.</p>
-            <p>✔ Ataque mínimo 10 y máximo 30.</p>
-            <p>✔ El súper ataque gasta 25 de chakra.</p>
-            <p>✔ La defensa gasta 15 de chakra.</p>
-            <p>✔ Recargar chakra suma 50.</p>
-            <p>✔ El primer turno es aleatorio.</p>
+            <p>Mucho daño = poca vida.</p>
+            <p>Vida mínima 100 y máxima 250.</p>
+            <p>Ataque mínimo 10 y máximo 30.</p>
+            <p>Súper ataque consume 25 de chakra.</p>
+            <p>Defensa consume 15 de chakra.</p>
+            <p>Recargar chakra suma 50 puntos.</p>
+            <p>El primer turno es aleatorio.</p>
 
         </div>
 
     </section>
 
     <!-- CHAKRA -->
-    <section class="chakra">
+    <section class="chakra" id="chakra">
 
-        <h2> ¿Qué es el Chakra?</h2>
+        <h2>¿Qué es el Chakra?</h2>
+
+        <img src="chakra.png" alt="Chakra">
 
         <p>
-            El chakra es la energía del personaje.
-            Sirve para realizar ataques especiales,
-            defenderse y usar habilidades.
+            El chakra es la energía principal utilizada durante la batalla.
         </p>
 
         <p>
-            Puedes recargar chakra usando el botón
-            de recarga durante la batalla.
+            Permite usar ataques especiales, habilidades únicas y
+            acciones defensivas.
         </p>
 
         <button onclick="mensaje()">
@@ -86,60 +99,87 @@
     </section>
 
     <!-- PERSONAJES -->
-    <section class="personajes">
+    <section class="personajes" id="personajes">
 
-        <h2> Personajes</h2>
+        <h2>Personajes</h2>
 
         <div class="galeria">
 
-            <img src="kirby.png">
-            <img src="bmo.png">
-            <img src="jake.png">
-            <img src="steve.png">
-            <img src="mike.png">
-            <img src="planton.png">
-            <img src="bomb.png">
-            <img src="boo.png">
-            <img src="ditto.png">
-            <img src="among.png">
-            <img src="sh.png">
-            <img src="a.png.jpeg">
+            <img src="kirby.png" onclick="abrirModal('Kirby','kirby.png','Personaje equilibrado y resistente.')">
+
+            <img src="bmo.png" onclick="abrirModal('BMO','bmo.png','Especialista en estrategia.')">
+
+            <img src="jake.png" onclick="abrirModal('Jake','jake.png','Gran fuerza y resistencia.')">
+
+            <img src="steve.png" onclick="abrirModal('Steve','steve.png','Versátil y poderoso.')">
+
+            <img src="mike.png" onclick="abrirModal('Mike','mike.png','Rápido y preciso.')">
+
+            <img src="planton.png" onclick="abrirModal('Plankton','planton.png','Pequeño pero peligroso.')">
+
+            <img src="bomb.png" onclick="abrirModal('Bomb','bomb.png','Ataques explosivos.')">
+
+            <img src="boo.png" onclick="abrirModal('Boo','boo.png','Experto en sorprender.')">
+
+            <img src="ditto.png" onclick="abrirModal('Ditto','ditto.png','Se adapta a cualquier situación.')">
+
+            <img src="among.png" onclick="abrirModal('Among Us','among.png','Especialista en sigilo.')">
+
+            <img src="sh.png" onclick="abrirModal('Shrek','sh.png','Gran fuerza física.')">
+
+            <img src="a.png.jpeg" onclick="abrirModal('Personaje A','a.png.jpeg','Poder especial único.')">
 
         </div>
 
     </section>
 
-    <!-- PANEL TIPO STEAM -->
-    <section class="steam">
+    <!-- VENTANA EMERGENTE -->
+    <div id="modal" class="modal">
 
-        <h2> Juego Destacado</h2>
+        <div class="modal-contenido">
+
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+
+            <h2 id="nombre"></h2>
+
+            <img id="imagenModal">
+
+            <p id="descripcion"></p>
+
+        </div>
+
+    </div>
+
+    <!-- ESTILO STEAM -->
+    <section class="steam" id="steam">
+
+        <h2>Juego Destacado</h2>
 
         <div class="steam-card">
 
-            <img src="kirby.png" alt="Juego">
+            <img src="steam.png" alt="Batalla Ninja">
 
             <div class="steam-info">
 
                 <h3>Batalla Ninja Ultimate</h3>
 
                 <p>
-                    ¡Llega el nuevo juego de Batalla Ninja!
-                    Usa personajes caricaturescos para pelear
-                    usando chakra, ataques especiales y defensa.
+                    Enfréntate a tus rivales utilizando habilidades,
+                    chakra y estrategias para convertirte en el campeón.
                 </p>
 
                 <p>
-                    Explora distintos modos de batalla y derrota
-                    a tus enemigos usando estrategia.
+                    Cada combate es diferente gracias a las características
+                    únicas de cada personaje.
                 </p>
 
                 <div class="datos">
 
                     <p><span>RESEÑAS:</span> Muy positivas</p>
 
-                    <p><span>LANZAMIENTO:</span> 2025</p>
+                    <p><span>LANZAMIENTO:</span> 2026</p>
 
-                    <p><span>DESARROLLADOR:</span> Tu Nombre</p>
+                    <p><span>DESARROLLADOR:</span> Equipo Batalla Ninja</p>
 
                     <p><span>EDITOR:</span> Batalla Ninja Studio</p>
 
@@ -149,17 +189,29 @@
 
                     <div>Acción</div>
                     <div>Peleas</div>
-                    <div>Anime</div>
+                    <div>Estrategia</div>
                     <div>Arcade</div>
 
                 </div>
 
             </div>
+
         </div>
 
     </section>
-<h2> Quienes somos.? 
-        LUIS, ALFREDO, GAEL, HECTOR, ALEJANDRO, LIONEL, MIKE</h2>
+
+    <!-- EQUIPO -->
+    <section id="equipo">
+
+        <h2>¿Quiénes somos?</h2>
+
+        <p>
+            LUIS, ALFREDO, GAEL, HÉCTOR,
+            ALEJANDRO, LIONEL Y MIKE.
+        </p>
+
+    </section>
+
     <script src="reglas.js"></script>
 
 </body>
